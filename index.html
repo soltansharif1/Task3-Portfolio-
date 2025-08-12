@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en" data-bs-theme="light">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Modern responsive portfolio built with Bootstrap" />
+  <meta name="theme-color" content="#6f42c1" />
+  <title>My Portfolio</title>
+
+  <script>
+    (() => {
+      try {
+        const storedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        document.documentElement.setAttribute('data-bs-theme', storedTheme || (prefersDark ? 'dark' : 'light'));
+      } catch (e) { }
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbarMain" data-bs-offset="90" tabindex="0">
+  <!-- Navbar -->
+  <nav id="navbarMain" class="navbar navbar-expand-lg fixed-top bg-body-tertiary border-bottom backdrop-blur">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#home">&lt;Soltan Sharifzada&gt;</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
+        aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Certificates</a></li>
+          <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="#activities">Activities</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2 ms-lg-3 mt-3 mt-lg-0">
+          <a class="btn btn-outline-primary btn-sm" href="https://github.com/soltansharif1" target="_blank"
+            rel="noreferrer">
+            <i class="bi bi-github"></i>
+            <span class="ms-1">GitHub</span>
+          </a>
+          <button id="themeToggle" class="btn btn-outline-secondary btn-sm" type="button" aria-label="Toggle theme">
+            <i id="themeIcon" class="bi bi-moon"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section id="home" class="hero-section d-flex align-items-center min-vh-100">
+    <div class="container py-5">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <span class="badge rounded-pill text-bg-primary mb-3">Ambitious Student</span>
+          <h1 class="display-4 fw-bold lh-sm">Hi, I'm <span class="text-primary">Soltan</span>.</h1>
+          <p class="lead text-body-secondary mt-3 mb-1">I craft delightful digital experiences as a</p>
+          <div class="h4 fw-semibold" aria-live="polite">
+            <span id="typed-roles" class="typed"></span>
+            <span class="typed-cursor">|</span>
+          </div>
+          <p class="mt-3 mb-4 text-body-secondary">Building accessible, performant, and beautiful web apps.</p>
+          <div class="d-flex flex-wrap gap-2">
+            <a href="#projects" class="btn btn-primary btn-lg"><i class="bi bi-rocket-takeoff me-2"></i>View
+              Projects</a>
+            <a href="#contact" class="btn btn-outline-primary btn-lg"><i class="bi bi-envelope me-2"></i>Contact Me</a>
+          </div>
+          <div class="d-flex align-items-center gap-3 mt-4">
+            <a class="text-decoration-none fs-4" href="https://github.com/soltansharif1" aria-label="GitHub"><i
+                class="bi bi-github"></i></a>
+            <a class="text-decoration-none fs-4" href="https://www.linkedin.com/in/soltansharif"
+              aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="hero-visual card border-0 shadow-sm">
+            <div class="card-body p-4">
+              <div class="ratio ratio-1x1 rounded-4 gradient-avatar d-flex align-items-center justify-content-center">
+                <div class="display-5">👋</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section-padding">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <h2 class="section-title">About Me</h2>
+          <p class="lead">Aspiring computer science student learning to create clean, responsive, and user-friendly
+            websites.
+          </p>
+          <p>I’m exploring modern web technologies and improving my skills through hands-on projects.
+            Passionate about building websites that not only work well but also look great on any device.</p>
+          <div class="mt-3">
+            <span class="badge text-bg-secondary me-2 mb-2">HTML</span>
+            <span class="badge text-bg-secondary me-2 mb-2">CSS</span>
+            <span class="badge text-bg-secondary me-2 mb-2">JavaScript</span>
+            <span class="badge text-bg-secondary me-2 mb-2">Bootstrap</span>
+            <span class="badge text-bg-secondary me-2 mb-2">SQL</span>
+            <span class="badge text-bg-secondary me-2 mb-2">Python</span>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="row g-3">
+            <div class="col-6">
+              <div class="stat-card">
+                <div class="stat-value">2+ yrs</div>
+                <div class="stat-label">Coding</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card">
+                <div class="stat-value">10+</div>
+                <div class="stat-label">Projects</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card">
+                <div class="stat-value">4 years</div>
+                <div class="stat-label">Education</div>
+              </div>
+            </div>
+            <div class="col-6">
+              <div class="stat-card">
+                <div class="stat-value">100%</div>
+                <div class="stat-label">Passion</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section-padding bg-body-tertiary">
+    <div class="container">
+      <h2 class="section-title">Education</h2>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot bg-primary"></div>
+          <div class="timeline-content">
+            <div class="d-flex justify-content-between flex-wrap">
+              <h5 class="mb-1">Computer Science · Bachelor</h5>
+              <span class="text-body-secondary">2023 — Present</span>
+            </div>
+            <p>Eötvös Loránd University
+            </p>
+            <div class="small text-body-secondary">Started my education after being awarded with prestigious Stipendium
+              Hungaricum scholarship</div>
+            <ul class="mt-3 mb-0">
+              <li>GPA 4.2/5.0</li>
+              <li>Research on web performance</li>
+              <li>Worked on different kind of projects</li>
+            </ul>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot bg-primary"></div>
+          <div class="timeline-content">
+            <div class="d-flex justify-content-between flex-wrap">
+              <h5 class="mb-1">Computer Engineering · Bachelor</h5>
+              <span class="text-body-secondary">2021 — 2023</span>
+            </div>
+            <p>Azerbaijan State University of Oil and Industry</p>
+
+            <div class="small text-body-secondary">Studied in SABAH groups which only accepts special students </div>
+            <ul class="mt-3 mb-0">
+              <li>GPA 89/100</li>
+              <li>Learned fundamentals of computer engineering</li>
+              <li>Attended lots of extra curricular activities</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section-padding">
+    <div class="container">
+      <h2 class="section-title">Certificates and Achievements</h2>
+      <div class="row g-4">
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title mb-1">Introduction to Data Analytics</h5>
+                <span class="text-body-secondary">2023</span>
+              </div>
+              <div class="text-body-secondary">IBM</div>
+              <ul class="mt-3 mb-0"><b>What I Learned:</b>
+                <li>The data analysis process involving collecting, wrangling, mining, and visualizing data</li>
+                <li>The different types of data structures, file formats, and sources of data</li>
+                <li>The Difference between different data roles such as Data Engineer, Data Analyst, Data Scientist,
+                  Business Analyst, and Business Intelligence Analyst</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title mb-1">Data Visualization with Excel and Cognos</h5>
+                <span class="text-body-secondary">2023</span>
+              </div>
+              <div class="text-body-secondary">IBM</div>
+              <ul class="mt-3 mb-0"><b>What I Learned:</b>
+                <li>Creating basic visualizations such as line graphs, bar graphs, and pie charts using Excel
+                  spreadsheets.</li>
+                <li>Constructing advanced charts and visualizations such as Treemaps, Sparklines, Histogram, Scatter
+                  Plots, and Filled Map Charts.</li>
+                <li>Build and share interactive dashboards using Excel and Cognos Analytics.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title mb-1">Intro to SQL</h5>
+                <span class="text-body-secondary">2022</span>
+              </div>
+              <div class="text-body-secondary">Kaggle </div>
+              <ul class="mt-3 mb-0"><b>What I Learned:</b>
+                <li>Writing SQL queries to retrieve, filter, and sort data from relational databases.</li>
+                <li>Using advanced SQL techniques such as joins, group functions, and subqueries to analyze datasets.
+                </li>
+                <li>Exploring and answering real-world data questions by applying SQL on Kaggle’s interactive platform.
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <div class="d-flex justify-content-between">
+                <h5 class="card-title mb-1">IAC-2023 Publication</h5>
+                <span class="text-body-secondary">2023</span>
+              </div>
+              <ul class="mt-3 mb-0"><b>What I Did:</b>
+                <li>Researched and analyzed the potential of Artificial Intelligence in the Space Mining Industry.</li>
+                <li>Authored and submitted a research article for presentation at IAC 2023.</li>
+                <li>Contributed to advancing knowledge on AI-driven solutions for future space resource extraction.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section-padding bg-body-tertiary">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-between gap-3 mb-3">
+        <h2 class="section-title mb-0">Selected Projects</h2>
+      </div>
+
+      <div class="row g-4" id="projectGrid">
+        <div class="col-md-6 col-lg-4 project-item" data-category="web">
+          <div class="card h-100 shadow-sm card-hover">
+            <img src="https://www.pixel4k.com/wp-content/uploads/2020/08/color-mixture-abstract_1596928091-768x432.jpg"
+              class="card-img-top" alt="Project screenshot" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">My Portfolio</h5>
+              <p class="card-text flex-grow-1">A responsive website with my personal and academic information</p>
+              <div class="d-flex gap-2 mt-2">
+                <span class="badge text-bg-primary">HTML</span>
+                <span class="badge text-bg-secondary">Bootstrap</span>
+                <span class="badge text-bg-primary">JS</span>
+
+
+
+              </div>
+            </div>
+            <div class="card-footer bg-transparent d-flex gap-2">
+              <a href="https://soltansharif1.github.io/Task3-Portfolio-" class="btn btn-sm btn-primary"><i
+                  class="bi bi-box-arrow-up-right me-1"></i>Live</a>
+              <a href="https://github.com/soltansharif1/Task3-Portfolio-" class="btn btn-sm btn-outline-secondary"><i
+                  class="bi bi-github me-1"></i>Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 project-item" data-category="mobile">
+          <div class="card h-100 shadow-sm card-hover">
+            <img
+              src="https://i0.wp.com/picjumbo.com/wp-content/uploads/modern-futuristic-abstract-liquid-3d-lines-background-free-image.jpg?w=600&quality=80"
+              class="card-img-top" alt="Project screenshot" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Parallax Website</h5>
+              <p class="card-text flex-grow-1">Created a website with parallax effect including puzzle inside </p>
+              <div class="d-flex gap-2 mt-2">
+                <span class="badge text-bg-primary">HTML</span>
+                <span class="badge text-bg-secondary">CSS</span>
+                <span class="badge text-bg-secondary">JS</span>
+
+              </div>
+            </div>
+            <div class="card-footer bg-transparent d-flex gap-2">
+              <a href="https://soltansharif1.github.io/Task2-Parallax-" class="btn btn-sm btn-primary"><i
+                  class="bi bi-box-arrow-up-right me-1"></i>Live</a>
+              <a href="https://github.com/soltansharif1/Task2-Parallax-" class="btn btn-sm btn-outline-secondary"><i
+                  class="bi bi-github me-1"></i>Code</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-4 project-item" data-category="ml">
+          <div class="card h-100 shadow-sm card-hover">
+            <img src="https://i.pinimg.com/736x/45/47/bf/4547bf95767b2d2ad6a7aa404b3bc76f.jpg" class="card-img-top"
+              alt="Project screenshot" />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Movie Cards</h5>
+              <p class="card-text flex-grow-1">Created simple flipping card views using only html and css</p>
+              <div class="d-flex gap-2 mt-2">
+                <span class="badge text-bg-primary">HTML</span>
+                <span class="badge text-bg-secondary">CSS</span>
+              </div>
+            </div>
+            <div class="card-footer bg-transparent d-flex gap-2">
+              <a href="https://soltansharif1.github.io/Task1-Movie-Cards-" class="btn btn-sm btn-primary"><i
+                  class="bi bi-box-arrow-up-right me-1"></i>Live</a>
+              <a href="https://github.com/soltansharif1/Task1-Movie-Cards-" class="btn btn-sm btn-outline-secondary"><i
+                  class="bi bi-github me-1"></i>Code</a>
+            </div>
+          </div>
+        </div>
+
+
+
+
+  </section>
+  <!--Activities-->
+  <section id="activities" class="section-padding">
+    <div class="container">
+      <h2 class="section-title">My Favorite Activities</h2>
+      <div class="row g-4">
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm card-hover text-center">
+            <div class="card-body d-flex flex-column align-items-center">
+              <div
+                class="activity-icon bg-body-tertiary rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                ⚽</div>
+              <h5 class="card-title mb-2">Football</h5>
+              <p class="card-text text-body-secondary mb-0">Teamwork, strategy, and staying active. My childhood dream.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm card-hover text-center">
+            <div class="card-body d-flex flex-column align-items-center">
+              <div
+                class="activity-icon bg-body-tertiary rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                ♟️</div>
+              <h5 class="card-title mb-2">Chess</h5>
+              <p class="card-text text-body-secondary mb-0">Tactics, patience, and long‑term thinking. Helps me to think
+                layered.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <div class="card h-100 shadow-sm card-hover text-center">
+            <div class="card-body d-flex flex-column align-items-center">
+              <div
+                class="activity-icon bg-body-tertiary rounded-circle d-inline-flex align-items-center justify-content-center mb-3">
+                🎭</div>
+              <h5 class="card-title mb-2">Opera</h5>
+              <p class="card-text text-body-secondary mb-0">Art, stories, and powerful performances. Reveals my
+                inner-peace.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section-padding">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-6">
+          <h2 class="section-title">Get in Touch</h2>
+          <p class="mb-4">Have a project in mind or want to say hi? Send me a message and I'll get back to you!</p>
+          <form id="contactForm" novalidate>
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" name="name" placeholder="John Doe" required>
+              <div class="invalid-feedback">Please enter your name.</div>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="you@example.com" required>
+              <div class="invalid-feedback">Please enter a valid email.</div>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" name="message" rows="5" placeholder="Your message..."
+                required></textarea>
+              <div class="invalid-feedback">Please enter a message.</div>
+            </div>
+            <div class="d-flex gap-2">
+              <button type="submit" class="btn btn-primary"><i class="bi bi-send me-2"></i>Send Message</button>
+              <a class="btn btn-outline-secondary" href="mailto:your.email@example.com"><i
+                  class="bi bi-envelope-at me-2"></i>Or Email</a>
+            </div>
+          </form>
+
+          <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div id="formToast" class="toast align-items-center text-bg-success border-0" role="status"
+              aria-live="polite" aria-atomic="true">
+              <div class="d-flex">
+                <div class="toast-body">
+                  Thanks! Your message was sent.
+                </div>
+                <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"
+                  aria-label="Close"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card h-100 shadow-sm">
+            <div class="card-body">
+              <h5 class="card-title mb-3">Quick Info</h5>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Budapest, Hungary</li>
+                <li class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>soltan.sharifzada@gmail.com</li>
+                <li class="mb-2"><i class="bi bi-clock text-primary me-2"></i>Replies within 1-2 days</li>
+              </ul>
+              <hr />
+              <p class="small text-body-secondary mb-0">Open to full-time, contract, and freelance opportunities.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="py-4 border-top bg-body-tertiary">
+    <div class="container d-flex flex-wrap justify-content-between align-items-center">
+      <p class="mb-0 text-body-secondary">© <span id="year"></span> Soltan Sharifzada. All rights reserved.</p>
+      <a href="#home" class="btn btn-sm btn-outline-secondary"><i class="bi bi-arrow-up"></i> Back to top</a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- App JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

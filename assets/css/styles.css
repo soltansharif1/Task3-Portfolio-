@@ -1,0 +1,168 @@
+:root {
+  --bs-primary: #6f42c1;
+  --accent-1: #6f42c1;
+  --accent-2: #d63384;
+}
+
+[data-bs-theme="dark"] {
+  --bs-primary: #9a77ff;
+}
+
+html,
+body {
+  font-family: 'Poppins', system-ui, -apple-system, Segoe UI, Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif;
+  scroll-behavior: smooth;
+}
+
+.backdrop-blur {
+  backdrop-filter: saturate(180%) blur(10px);
+}
+
+
+.section-padding {
+  padding: 80px 0;
+}
+
+@media (min-width: 992px) {
+  .section-padding {
+    padding: 100px 0;
+  }
+}
+
+
+section {
+  scroll-margin-top: 80px;
+}
+
+
+.hero-section {
+  position: relative;
+  background: radial-gradient(1200px 600px at 10% 10%, color-mix(in oklab, var(--accent-1) 12%, transparent), transparent),
+    radial-gradient(1000px 500px at 90% 20%, color-mix(in oklab, var(--accent-2) 10%, transparent), transparent);
+}
+
+.hero-visual .gradient-avatar {
+  background-image: url('../images/me.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.typed {
+  color: var(--bs-primary);
+}
+
+.typed-cursor {
+  color: color-mix(in oklab, var(--bs-primary) 70%, var(--bs-body-color));
+  animation: blink 1s step-start infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+
+.section-title {
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+
+
+.stat-card {
+  background: var(--bs-body-bg);
+  border: 1px solid var(--bs-border-color);
+  border-radius: 1rem;
+  padding: 18px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .04);
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.stat-label {
+  color: var(--bs-secondary-color);
+  font-weight: 500;
+}
+
+
+.timeline {
+  position: relative;
+  margin-left: .5rem;
+}
+
+.timeline:before {
+  content: "";
+  position: absolute;
+  left: 12px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--bs-border-color);
+}
+
+.timeline-item {
+  position: relative;
+  padding-left: 44px;
+  margin-bottom: 28px;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 4px;
+  top: 6px;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  box-shadow: 0 0 0 4px color-mix(in oklab, var(--bs-primary) 10%, transparent);
+}
+
+.timeline-content {
+  background: var(--bs-body-bg);
+  border: 1px solid var(--bs-border-color);
+  border-radius: .75rem;
+  padding: 16px;
+}
+
+
+.card-hover {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, .08);
+}
+
+
+.navbar.navbar-scrolled {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .06);
+}
+
+
+.filter-btn.active {
+  color: #fff;
+  background: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+
+footer a {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+
+.shadow-soft {
+  box-shadow: 0 0.5rem 1.25rem rgba(0, 0, 0, .05) !important;
+}
+
+.activity-icon {
+  width: 96px;
+  height: 96px;
+  font-size: 2.5rem;
+}
